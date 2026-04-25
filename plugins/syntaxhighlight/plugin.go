@@ -104,11 +104,11 @@ func highlightCode(code, lang string) string {
 }
 
 var (
-	goKeywordRE  = buildKeywordRE(goKeywords)
-	goBuiltinRE  = buildKeywordRE(goBuiltins)
-	goCommentRE  = regexp.MustCompile(`(//[^\n]*)`)
-	goStringRE   = regexp.MustCompile("(?s)(`[^`]*`|&quot;(?:[^&]|&[^q]|&q[^u]|&qu[^o]|&quo[^t])*&quot;)")
-	goNumberRE   = regexp.MustCompile(`\b(0x[0-9a-fA-F]+|\d+(?:\.\d+)?)\b`)
+	goKeywordRE = buildKeywordRE(goKeywords)
+	goBuiltinRE = buildKeywordRE(goBuiltins)
+	goCommentRE = regexp.MustCompile(`(//[^\n]*)`)
+	goStringRE  = regexp.MustCompile("(?s)(`[^`]*`|&quot;(?:[^&]|&[^q]|&q[^u]|&qu[^o]|&quo[^t])*&quot;)")
+	goNumberRE  = regexp.MustCompile(`\b(0x[0-9a-fA-F]+|\d+(?:\.\d+)?)\b`)
 
 	jsKeywordRE = buildKeywordRE(jsKeywords)
 	jsCommentRE = regexp.MustCompile(`(//[^\n]*|/\*(?s:.*?)\*/)`)
@@ -123,8 +123,8 @@ var (
 	shCommentRE = regexp.MustCompile(`(#[^\n]*)`)
 	shFlagRE    = regexp.MustCompile(`(--?[a-zA-Z][a-zA-Z0-9\-]*)`)
 
-	yamlKeyRE    = regexp.MustCompile(`(?m)^(\s*)([a-zA-Z_][a-zA-Z0-9_\-]*)\s*(:)`)
-	yamlValueRE  = regexp.MustCompile(`(?m)(:\s+)(.+)$`)
+	yamlKeyRE     = regexp.MustCompile(`(?m)^(\s*)([a-zA-Z_][a-zA-Z0-9_\-]*)\s*(:)`)
+	yamlValueRE   = regexp.MustCompile(`(?m)(:\s+)(.+)$`)
 	yamlCommentRE = regexp.MustCompile(`(#[^\n]*)`)
 
 	jsonStringRE = regexp.MustCompile(`(?s)(&quot;(?:[^&]|&[^q]|&q[^u]|&qu[^o]|&quo[^t])*&quot;)`)
