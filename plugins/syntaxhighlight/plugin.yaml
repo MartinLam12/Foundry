@@ -12,5 +12,6 @@ permissions:
   render:
     assets:
       inject_css: true
+      inject_js: true
     after_render:
-      rewrite: true
+      mutate_html: true
