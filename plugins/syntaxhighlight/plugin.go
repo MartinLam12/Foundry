@@ -54,7 +54,7 @@ func (p *Plugin) OnAfterRender(_ string, html []byte) ([]byte, error) {
 			sb.WriteString(`<div class="sh-toolbar"><span class="sh-lang">`)
 			sb.WriteString(template.HTMLEscapeString(lang))
 			sb.WriteString(`</span>`)
-			sb.WriteString(`<button class="sh-copy" onclick="foundryShCopy(this)" aria-label="Copy code">Copy</button>`)
+			sb.WriteString(`<button type="button" class="sh-copy" onclick="foundryShCopy(this)" aria-label="Copy code">Copy</button>`)
 			sb.WriteString(`</div>`)
 		}
 		sb.WriteString(`<pre class="sh-pre"`)
